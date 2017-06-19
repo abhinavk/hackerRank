@@ -1,0 +1,8 @@
+# IDE and editor workspace files
+.idea
+.vscode
+
+# Generated files
+*.o
+*.exe
+*.pyc
