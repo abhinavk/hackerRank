@@ -1,7 +1,8 @@
 # HackerRank - Algorithms - Arrays and Sorting
 # Mark and Toys
 
-def get_result(total_toys, budget, prices):
+
+def get_result(budget, prices):
     toys = 0
     prices = [int(x) for x in prices]
     prices.sort()
@@ -14,6 +15,6 @@ def get_result(total_toys, budget, prices):
 
 
 if __name__ == '__main__':
-    n,k = input().split(' ')
+    n, k = input().split(' ')
     prices = input().split(' ')
-    print(get_result(int(n),int(k),prices))
+    print(get_result(int(k), prices))

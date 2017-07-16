@@ -1,10 +1,12 @@
-# HackerRank - Algorithms - Warmup
-# Chocolate Feast
+"""
+HackerRank - Algorithms - Warmup
+Chocolate Feast
+"""
 
 
 def how_many_chocolates(n, c, m):
     wrappers = choco = n//c
-    while(wrappers >= m):
+    while wrappers >= m:
         exch = wrappers//m
         choco += exch
         wrappers = wrappers - exch*m + exch
