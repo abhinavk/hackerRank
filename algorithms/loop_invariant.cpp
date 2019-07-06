@@ -4,38 +4,41 @@
 #include <stdlib.h>
 #include <assert.h>
 /* Head ends here */
-void insertionSort(int ar_size, int *  ar) {    
-    int i,j,tmp;
-    int value;
-    for(i=1;i<ar_size;i++)
+void insertionSort(int ar_size, int *ar)
+{
+  int i, j, tmp;
+  int value;
+  for (i = 1; i < ar_size; i++)
+  {
+    j = i;
+    value = ar[i];
+    while (j > 0 && value < ar[j - 1])
     {
-       j = i;
-        value=ar[i];
-        while(j>0 && value<ar[j-1])
-        {
-            tmp = ar[j];
-            ar[j]=ar[j-1];
-            ar[j-1]=tmp;
-            j--;
-        }
+      tmp = ar[j];
+      ar[j] = ar[j - 1];
+      ar[j - 1] = tmp;
+      j--;
     }
-   for(j=0;j<ar_size;j++)
-        {
-            printf("%d",ar[j]);
-            printf(" ");
-        }
+  }
+  for (j = 0; j < ar_size; j++)
+  {
+    printf("%d", ar[j]);
+    printf(" ");
+  }
 }
 /* Tail starts here */
-int main(void) {
-   
-   int _ar_size;
-scanf("%d", &_ar_size);
-int _ar[_ar_size], _ar_i;
-for(_ar_i = 0; _ar_i < _ar_size; _ar_i++) { 
-   scanf("%d", &_ar[_ar_i]); 
-}
+int main(void)
+{
 
-insertionSort(_ar_size, _ar);
-   
-   return 0;
+  int _ar_size;
+  scanf("%d", &_ar_size);
+  int _ar[_ar_size], _ar_i;
+  for (_ar_i = 0; _ar_i < _ar_size; _ar_i++)
+  {
+    scanf("%d", &_ar[_ar_i]);
+  }
+
+  insertionSort(_ar_size, _ar);
+
+  return 0;
 }

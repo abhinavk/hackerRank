@@ -12,16 +12,17 @@ def reduce_string(s):
     """
     _stack = []
 
-    for c  in s:
-        if not _stack or c != _stack[-1] :
+    for c in s:
+        if not _stack or c != _stack[-1]:
             _stack.append(c)
         else:
             _stack.pop()
 
     if len(_stack) > 0:
-        return ''.join(_stack)
-    return 'Empty String'
+        return "".join(_stack)
+    return "Empty String"
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     input_string = input()
     print(reduce_string(input_string))

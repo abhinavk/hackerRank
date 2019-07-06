@@ -14,7 +14,7 @@ def get_result(budget, prices):
     return toys
 
 
-if __name__ == '__main__':
-    n, k = input().split(' ')
-    prices = input().split(' ')
+if __name__ == "__main__":
+    n, k = input().split(" ")
+    prices = input().split(" ")
     print(get_result(int(k), prices))

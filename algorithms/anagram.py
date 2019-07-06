@@ -6,7 +6,7 @@ def shifts_required(input_str):
     shifts = 0
     if len(input_str) % 2:
         return -1
-    a, b = input_str[:len(input_str)//2], input_str[len(input_str)//2:]
+    a, b = input_str[: len(input_str) // 2], input_str[len(input_str) // 2 :]
     dict = {}
     dicta = {}
     for i in b:
@@ -22,7 +22,7 @@ def shifts_required(input_str):
             dicta[i] = 1
     for i in dict.keys():
         if dict[i] > dicta[i]:
-            shifts += dict[i]-dicta[i]
+            shifts += dict[i] - dicta[i]
     return shifts
 
 
